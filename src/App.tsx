@@ -1,7 +1,4 @@
 import React from 'react';
-import {  Button, Checkbox, Input, Select } from 'antd';
-import { SearchOutlined } from '@ant-design/icons';
-import ChartTabs from './components/chart-tabs';
 import { Route, Routes } from 'react-router-dom';
 import Project from './pages/project/project';
 import Chart from './pages/chart/chart';
