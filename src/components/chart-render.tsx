@@ -1,13 +1,8 @@
 import Chart from "react-apexcharts";
 
-type IProps = {
-  id: string
-}
-
-function ChartRender({ id }: IProps) {
+function ChartRender() {
   return (
     <>
-      Chart tab: {id}
       <Chart
         type="bar"
         width="100%"
