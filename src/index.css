@@ -26,3 +26,7 @@
   border-radius: 6px;
   margin-inline-end: 24px;
 }
+
+.ant-select-item-option-content {
+  text-transform: capitalize;
+}

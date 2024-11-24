@@ -1,6 +1,30 @@
 import Chart from "react-apexcharts";
+import { useSelector } from "react-redux";
+import { RootState } from "../../../stores";
+import { VarialbesType } from "../../../types";
 
 function ChartRender() {
+  const dataChart = useSelector((state: RootState) => state.chart.dataChart);
+
+  if(!dataChart) {
+    return (
+      <div className='flex items-center justify-center h-[350px]'>
+        No data
+      </div>
+    )
+  }
+
+  const series = dataChart.map((item: VarialbesType) => {
+    const data = [];
+    for(let i = 0; i < 6; i++) {
+      data.push(Math.floor(Math.random() * 100))
+    }
+    return {
+      name: item.name,
+      data
+    }
+  })
+
   return (
     <>
       <Chart
@@ -44,16 +68,7 @@ function ChartRender() {
             }
           }
         }}
-        series={[{
-          name: 'Bacon',
-          data: [44, 55, 57, 56, 61, 102]
-        }, {
-          name: 'Chicken',
-          data: [76, 85, 101, 98, 87, 150]
-        }, {
-          name: 'Rice',
-          data: [35, 41, 36, 26, 45, 48]
-        }]}
+        series={series}
       />
     </>
   )
