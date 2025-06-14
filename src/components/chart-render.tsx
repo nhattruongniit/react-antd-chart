@@ -26,7 +26,7 @@ function ChartRender() {
             colors: ['transparent']
           },
           xaxis: {
-            categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+            categories: ['Admin', 'Member', 'Operator'],
           },
           yaxis: {
             title: {
@@ -39,20 +39,20 @@ function ChartRender() {
           tooltip: {
             y: {
               formatter: function (val) {
-                return val + " con"
+                return val + " member"
               }
             }
           }
         }}
         series={[{
-          name: 'Bacon',
-          data: [44, 55, 57, 56, 61, 102]
+          name: 'Admin',
+          data: [44, 55, 57]
         }, {
-          name: 'Chicken',
-          data: [76, 85, 101, 98, 87, 150]
+          name: 'Member',
+          data: [76, 85, 101]
         }, {
-          name: 'Rice',
-          data: [35, 41, 36, 26, 45, 48]
+          name: 'Operator',
+          data: [35, 41, 36]
         }]}
       />
     </>

@@ -1,43 +1,33 @@
-import { Button, Checkbox, Input, Select, DatePicker } from 'antd'
+import { Button, Checkbox, Input, Select } from 'antd'
 import { SearchOutlined } from '@ant-design/icons'
 
 import ChartRender from '../../components/chart-render'
-
-const { RangePicker } = DatePicker;
 
 function Chart() {
   return (
     <div className='h-[calc(100vh-64px)] flex justify-between'>
       <div className='w-[300px] h-full pt-4 border-r-[1px] border-[#ddd] shrink-0'>
-        <div className='flex flex-col h-full justify-between'>
+        <div className='flex flex-col h-full justify-start'>
           <h3 className="uppercase text-center text-[14px]">Control Center</h3>
           <hr className='my-2'/>
+          <div className='flex items-center justify-end mx-3'>
+            <Button type="primary">Apply</Button>
+          </div>
           <div className='mx-3'>
-            <div>
-              <div className='font-bold text-[12px] mb-2'>Select date:</div>
-              <RangePicker />
-            </div>
             <div className='h-[calc(100vh-250px)]'>
-              <div className="font-bold text-[12px] mt-5">Selected Variables / Sections</div>
+              <div className="font-bold text-[12px] mt-5">Selected Members / Sections</div>
               <div className='mt-4 h-[calc(100vh-287px)] overflow-auto'>
-                <div>
-                  <Checkbox>Bacon</Checkbox>
+                <div className="p-2 mb-2 text-sm text-blue-800 rounded-lg bg-blue-50" role="alert">
+                  <span className="font-medium">Tony Nguyen</span>
                 </div>
-                <div>
-                  <Checkbox>Bacon</Checkbox>
+                <div className="p-2 mb-2 text-sm text-yellow-800 rounded-lg bg-yellow-50" role="alert">
+                  <span className="font-medium">Minh Nguyen</span>
                 </div>
-                <div>
-                  <Checkbox>Bacon</Checkbox>
-                </div>
-                <div>
-                  <Checkbox>Bacon</Checkbox>
+                <div className="p-2 mb-2 text-sm text-red-800 rounded-lg bg-red-50" role="alert">
+                  <span className="font-medium">Antony John</span>
                 </div>
               </div>
             </div>
-          </div>
-
-          <div className='border-t-[1px] border-[#ddd] shrink-0 h-[40px] flex items-center justify-end mx-3'>
-            <Button type="primary">Apply</Button>
           </div>
         </div>
       </div>
@@ -82,17 +72,17 @@ function Chart() {
                 className='w-full border-b-[1px] border-[#ddd]'
                 variant="borderless" 
                 addonBefore={<SearchOutlined />} 
-                placeholder="Search variables ..." 
+                placeholder="Search ..." 
               />
             </div>
           </div>
           <div className='h-[calc(100vh-60px)] px-3'>
             <div className='mt-4 pb-4 h-[calc(100vh-220px)] overflow-auto'>
               <div>
-                <Checkbox>Bacon</Checkbox>
+                <Checkbox>Tony Nguyen</Checkbox>
               </div>
               <div>
-                <Checkbox>Bacon</Checkbox>
+                <Checkbox>Minh Nguyen</Checkbox>
               </div>
             </div>
           </div>
