@@ -30,7 +30,7 @@ function ChartRender() {
           },
           yaxis: {
             title: {
-              text: '(con)'
+              text: '(member)'
             }
           },
           fill: {
